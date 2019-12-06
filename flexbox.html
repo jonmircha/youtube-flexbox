@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aprendiendo Flexbox</title>
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    .container {
+      background-color: #333;
+      height: 400px;
+      width: 100%;
+
+      display: flex;
+      /* Define que una caja será flexbox de bloque o flexbox de línea */
+      /* flex | inline-flex */
+      flex-direction: row;
+      /* Define el eje principal (main axis) row - x, column - y */
+      /* row | row-reverse | column | column-reverse */
+      flex-wrap: nowrap;
+      /* Define si la caja flexbox envuelve o NO a sus hijos */
+      /* nowrap | wrap | wrap-reverse */
+      flex-flow: row nowrap;
+      /* Es un shorthand de flex-direction y flex-wrap */
+      justify-content: flex-start;
+      /* Define la alineación de los hijos en el eje principal (main axis) */
+      /* flex-start | center | flex-end | space-between | space-around | space-evenly */
+      align-items: stretch;
+      /* Define la alineación de los hijos en el eje transversal (cross axis), dentro de cada línea */
+      /* stretch | flex-start | flex-end | center | baseline */
+      align-content: flex-start;
+      /* Define la alineación de los hijos en el eje transversal (cross axis), NO funciona cuando los hijos están en UNA sóla línea (es decir cuando flex-wrap tiene el valor de nowrap, NO FUNCIONA) */
+      /* flex-start | flex-end | center | space-between | space-around | space-evenly | stretch */
+    }
+
+    .item {
+      border: medium solid #999;
+      /* width: 20%; */
+      /* height: 20%; */
+      /* width: 100px; */
+      background-color: #666;
+      flex-grow: 0;
+      /* Cuando la caja flexbox tenga espacio sobrante, es la habilidad o el factor de crecer, valor por defecto es 0, NO se aceptan valores negativos */
+      flex-shrink: 1;
+      /* Cuando la caja flexbox NO tenga espacio sobrante, es la habilidad o el factor de encogerse, valor por defecto es 1, NO se aceptan valores negativos */
+      flex-basis: auto;
+      flex-basis: 100px;
+      /* Es el tamaño del elemento hijo dentro de la línea de la caja flexbox
+        Si la caja flexbox tiene dirección de fila, flex-basis representa el width
+        Si la caja flexbox tiene dirección de columna, flex-basis representa el height
+        Valor por defecto auto */
+      flex: 0 1 auto;
+      /* Es un shorthand de las propiedades flex-grow flex-shrink y flex-basis, en ese orden*/
+      order: 0;
+      /* Representa el orden que tendrán los elementos hijos en la caja flexbox
+        Valor por defecto 0
+        Se aceptan valores positivos y negativos
+        Un valor menor siempre irá antes que un valor mayor */
+      align-self: stretch;
+      /* stretch | flex-start | flex-end | center | baseline */
+      /* Sobreescribe el valor de la propiedad align-items sólo para el elemento hijo especificado */
+    }
+
+    .item:nth-child(2) {
+      /* flex-grow: 0; */
+      /* flex-shrink: 2; */
+      order: -1;
+    }
+
+    .item:nth-child(3) {
+      /* flex-grow: 0; */
+      align-self: center;
+    }
+
+    /* .item:nth-child(2),
+    .item:nth-child(17) {
+      font-size: 250%;
+    } */
+  </style>
+</head>
+
+<body>
+  <section class="container">
+    <article class="item">Flex Item 1</article>
+    <article class="item">Flex Item 2</article>
+    <article class="item">Flex Item 3</article>
+    <article class="item">Flex Item 4</article>
+    <article class="item">Flex Item 5</article>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="container">
+    <article class="item">Flex Item 1</article>
+    <article class="item">Flex Item 2</article>
+    <article class="item">Flex Item 3</article>
+  </section>
+  <br><br>
+  <section class="container">
+    <article class="item">Item 1</article>
+    <article class="item">Item 2</article>
+    <article class="item">Item 3</article>
+    <article class="item">Item 4</article>
+    <article class="item">Item 5</article>
+    <article class="item">Item 6</article>
+    <article class="item">Item 7</article>
+    <article class="item">Item 8</article>
+    <article class="item">Item 9</article>
+    <article class="item">Item 10</article>
+    <article class="item">Item 11</article>
+    <article class="item">Item 12</article>
+    <article class="item">Item 13</article>
+    <article class="item">Item 14</article>
+    <article class="item">Item 15</article>
+    <article class="item">Item 16</article>
+    <article class="item">Item 17</article>
+    <article class="item">Item 18</article>
+    <article class="item">Item 19</article>
+  </section>
+</body>
+
+</html>

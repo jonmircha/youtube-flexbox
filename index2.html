@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox Grid Artesanal</title>
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    .container {
+      margin: auto;
+      max-width: 1200px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .flex-item {
+      border: thin solid #CCC;
+      flex: 0 0 100%;
+    }
+
+
+    @media (min-width: 576px) {
+      .flex-item {
+        flex: 0 0 50%;
+      }
+    }
+
+
+    @media (min-width: 768px) {
+      .flex-item {
+        flex: 0 0 33.33333333333333%;
+      }
+    }
+
+
+    @media (min-width: 992px) {
+      .flex-item {
+        flex: 0 0 25%;
+      }
+    }
+
+
+    @media (min-width: 1200px) {
+      .flex-item {
+        flex: 0 0 16.6666666667%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Flexbox Grid Artesanal</h1>
+  <div class="container">
+    <section class="flex-container">
+      <article class="flex-item">Item 1</article>
+      <article class="flex-item">Item 2</article>
+      <article class="flex-item">Item 3</article>
+      <article class="flex-item">Item 4</article>
+      <article class="flex-item">Item 5</article>
+      <article class="flex-item">Item 6</article>
+      <article class="flex-item">Item 7</article>
+      <article class="flex-item">Item 8</article>
+      <article class="flex-item">Item 9</article>
+      <article class="flex-item">Item 10</article>
+      <article class="flex-item">Item 11</article>
+      <article class="flex-item">Item 12</article>
+      <article class="flex-item">Item 13</article>
+      <article class="flex-item">Item 14</article>
+      <article class="flex-item">Item 15</article>
+      <article class="flex-item">Item 16</article>
+      <article class="flex-item">Item 17</article>
+      <article class="flex-item">Item 18</article>
+      <article class="flex-item">Item 19</article>
+    </section>
+  </div>
+</body>
+
+</html>
